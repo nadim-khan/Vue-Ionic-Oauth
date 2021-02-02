@@ -1,0 +1,7 @@
+{
+  "name": "nadson-vue",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
