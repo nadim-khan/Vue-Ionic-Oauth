@@ -2,11 +2,9 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-          <ion-fab-button slot="start">
-            <ion-back-button :default-href="pageDefaultBackLink" >
+            <ion-back-button :default-href="pageDefaultBackLink" slot="start">
 
             </ion-back-button>
-          </ion-fab-button>
           
         <ion-title>{{ pageTitle }}</ion-title>
         <ion-button color="danger" slot="end" @click="logout">
@@ -17,6 +15,7 @@
     <ion-content>
       <slot />
     </ion-content>
+    
   </ion-page>
 </template>
 
@@ -28,7 +27,7 @@ import {
   IonTitle,
   IonContent,
   IonBackButton,
-  IonButton,IonFabButton
+  IonButton
 } from "@ionic/vue";
 export default {
   props: ["pageTitle", "pageDefaultBackLink"],
@@ -39,8 +38,7 @@ export default {
     IonTitle,
     IonContent,
     IonBackButton,
-    IonButton,
-    IonFabButton
+    IonButton
   },
   methods:{
       logout() {

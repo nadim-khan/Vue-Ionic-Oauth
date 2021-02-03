@@ -19,14 +19,16 @@
       </form>
 
         <ion-button expand="block" :routerLink="{ name: 'profile' }" >Log in</ion-button>
-        <ion-button color="light" expand="block">
+        <ion-button color="light" expand="block" :routerLink="{ name: 'register' }">
           Create an account
         </ion-button>
 
 
         <div class="oauth-btns">
           or signin with
-        <ion-button expand="block" @click="googleAuth"><ion-icon slot="start" :icon="logoGoogle" />Google</ion-button>
+        <ion-button color="danger" expand="block" @click="googleAuth">
+          <ion-icon slot="start" :icon="logoGoogle" />Google
+        </ion-button>
         </div>
     </ion-content>
   </ion-page>
